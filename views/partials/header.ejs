@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="styles/index.css" />
+    
+    <!-- JQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+    <!-- Font Family Lobster -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Lobster&display=swap" rel="stylesheet">
+    
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script> 
+      $(document).ready(function(){
+        $(".cross").on("click", function(){
+          $(".nav-back-phone").slideUp();
+        })
+        
+        $("#menu").on("click", function(){
+          $(".nav-back-phone").slideToggle();
+          
+        })
+        
+        
+      });
+      
+      document.onreadystatechange = function () {
+        var state = document.readyState
+        if (state == 'interactive') {
+             document.getElementById('contents').style.visibility="hidden";
+        } else if (state == 'complete') {
+            setTimeout(function(){
+               document.getElementById('interactive');
+               document.getElementById('load').style.visibility="hidden";
+               document.getElementById('contents').style.visibility="visible";
+            },1000);
+        }
+      }
+      
+    </script>
+  </head>
+  <body>
+    <div id="load" style="visibility: visible;"></div>
+    
+    <div id="contents" style="visibility: hidden;">
+      
+      <main class="jumbotron p-0 pt-5 mb-0 jumbotron-custom" id="home" >
+        <div class="opacity-dark py-5">
+          <br><br><br>
+          <nav class="navigation-large bg-white">
+            <a href="">
+              <img src="https://i.ibb.co/SPJCjWW/logoReal.png" class="w-10">
+            </a>
+            <ul class="navigation-button mb-2">
+              <li><a href="#home">HOME</a></li>
+              <li><a href="#book-appointment">BOOK APPOINTMENT</a></li>
+              <li><a href="#services">SERVICES</a></li>
+              <li><a href="#about-us">ABOUT US</a></li>
+              <li><a href="#contact-us">CONTACT US</a></li>
+            </ul>
+            
+          </nav>
+          <br><br><br>
+          <div class="pb-5 mt-5" style="z-index: 999">
+            <h1 class="pt-2 pb-2 text-lead text-white text-center text-shadow font-anton bg-primary border border-white">NO NEED TO WORRY ABOUT CAR SERVICE</h1>
+            <hr style="width: 50%; text-align: center; background: white">
+            <div class="text-center">
+              <a href="#book-appointment">
+                <button class="btn btn-outline-light" style="z-index: 2">Book Appointment Now</button>
+              </a>
+            </div>
+            <br><br>
+          </div>
+        </div>
+      </main>
+      
+      <div class="white-background col-12 p-0 pt-4 m-0" data-aos="fade-in" data-aos-duration="1300">
+        <main class="container">
+          <div class="row col-12 m-0">
+            <div class="col-12">
+              <h1 class="font-lobster">What makes us Special !!!</h1>
+              <hr class="ml-0 w-25" style="height:6px;border:none;color:#333;background-color:#333" />
+            </div>
+            <div class="col-md-3 col-6 text-center">
+              <span style="font-size: 5rem">
+                <i class="fa fa-user"></i>
+              </span>
+              <h6 class="lead font-weight-bold" style="font-family: Calibri; ">
+                TRAINED <br> PROFESSIONALS
+              </h6>
+            </div>
+            
+            <div class="col-md-3 col-6 text-center">
+              <span style="font-size: 5rem">
+                <i class="fa fa-bolt"></i>
+              </span>
+              <h6 class="lead font-weight-bold" style="font-family: Calibri; ">
+                FAST <br> SERVICES
+              </h6>
+            </div>
+            
+            <div class="col-md-3 col-6 text-center">
+              <span style="font-size: 5rem">
+                <i class="fa fa-dollar"></i>
+              </span>
+              <h6 class="lead font-weight-bold" style="font-family: Calibri; ">
+                COST <br> EFFECTIVE
+              </h6>
+            </div>
+            
+            <div class="col-md-3 col-6 text-center">
+              <span style="font-size: 5rem">
+                <i class="fa fa-reply-all"></i>
+              </span>
+              <h6 class="lead font-weight-bold" style="font-family: Calibri; ">
+                QUICK <br> RESPONSE
+              </h6>
+            </div>
+          </div>
+          <br>
+        </main>
+      </div>
+      
+      <section data-aos="fade-in" data-aos-duration="1300">
+        <div class="dark-background" id="book-appointment" >
+          <div class="p-4 container">
+            <h2 class="font-lobster text-white">Book Appointment !!!</h2>
+            <hr class="ml-0 w-25" style="height:6px;border:none;color:#333;background-color:white" />
+          
+            <form action="/" method="POST" class="row" style="box-sizing: border-box">
+              <div class="row col-12">
+                <input class="form-control-custom col m-2" style="box-sizing: border-box" name="first" type="text" placeholder="Enter your first name" required />
+                <input class="form-control-custom col m-2" style="box-sizing: border-box" name="last" type="text" placeholder="Enter your last name" required />
+              </div>
+              <div class="row col-12">
+                <input class="form-control-custom col-md m-2" style="box-sizing: border-box" name="email" type="email" placeholder="Enter your email address" required />
+                <input class="form-control-custom col-md m-2" style="box-sizing: border-box" name="phone" type="number" placeholder="Enter your phone number address" required />
+              </div>
+              <div class="row col-12">
+                <input class="form-control-custom col m-2" style="box-sizing: border-box" name="company" type="text" placeholder="Name of Car" required />
+                <input class="form-control-custom col m-2" style="box-sizing: border-box" name="model" type="text" placeholder="Model of Car" required />
+              </div>
+              <input type="submit" class="m-2 btn btn-outline-light" />
+            </form>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Image Slider Start from here -->
+      <div class="white-background pb-4" class="image-slider" data-aos="fade-in" data-aos-duration="1300">
+        <div class="container pt-4">
+          <h2 class="font-lobster text-dark">Our Gallery !!!</h2>
+          <hr class="ml-0 w-25 bg-dark" style="height:6px;border:none;color:#333;00" />
+        </div>
+        <section id="slider" class="m-4" data-aos="">
+          <input type="radio" name="slider" id="s1">
+          <input type="radio" name="slider" id="s2">
+          <input type="radio" name="slider" id="s3" checked>
+          <input type="radio" name="slider" id="s4">
+          <input type="radio" name="slider" id="s5">
+          <label for="s1" id="slide1"></label>
+          <label for="s2" id="slide2"></label>
+          <label for="s3" id="slide3"></label>
+          <label for="s4" id="slide4"></label>
+          <label for="s5" id="slide5"></label>
+        </section>
+      </div>
+      
+      <!-- Services page starts from here -->
+      <div class="col-12 p-0 pt-3 m-0 dark-background" id="services">
+        <div class="container  p-0">
+          <div class="col-12">
+            <h2 class="font-lobster text-white">Our Services !!!</h2>
+            <hr class="ml-0 w-25 bg-white" style="height:6px;border:none;color:#333;00" />
+          </div>
+          <div class="col-md-12 row m-0 py-3">
+            <div class="col-md-4 col-6 p-3 my-2" data-aos="flip-up">
+              <div class="service-autocollision service-before-design" >
+                <p class="service-item">AUTO COLLISION</p>
+              </div>
+            </div>
+            <div class="col-md-4 col-6 p-3 my-2" data-aos="flip-up">
+              <div class="service-deny service-before-design" >
+                <p class="service-item">CLAIM DENY</p>
+              </div>
+            </div>
+            <div class="col-md-4 col-6 p-3 my-2" data-aos="flip-up">
+              <div class="service-oil service-before-design" >
+                <p class="service-item">OIL SERVICE</p>
+              </div>
+            </div>
+            <div class="col-md-4 col-6 p-3 my-2" data-aos="flip-up">
+              <div class="service-paint service-before-design" >
+                <p class="service-item">CAR PAINT</p>
+              </div>
+            </div>
+            <div class="col-md-4 col-12 p-3 my-2" data-aos="flip-up">
+              <div class="service-tow service-before-design" >
+                <p class="service-item">TOWING SERVICE</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Contact Us -->
+      <div class="white-background col-12 p-0 m-0" id="contact-us" data-aos="fade-in" data-aos-duration="1300">
+        <div class="container py-4">
+          <div class="row col-12">
+            <div class="col-12">
+              <h2 class="font-lobster text-dark">Contact Us !!!</h2>
+              <hr class="ml-0 w-25 bg-dark" style="height:6px;border:none;color:#333;00" />
+            </div>
+            <div class="col-md-7">
+              <div class="col-12 row">
+                <div class="col-3 text-center">
+                  <i class="fa fa-question" style="font-size: 5rem;"></i>
+                </div>
+                <div class="col-9">
+                  <h2>Questions</h2>
+                  <p>Feel free to reach out to us if you have any concern <br> 
+                    <strong>Phone:</strong> +1 4454654654564646 <br>
+                    <strong>Email: ggs@gmail.com</strong> <br>
+                  </p> <br>
+                </div>
+              </div>
+              
+              <div class="col-12 row">
+                <div class="col-3 text-center">
+                  <i class="fa fa-map-marker" style="font-size:5rem"></i>
+                </div>
+                <div class="col-9">
+                  <h4>Address</h4>
+                  <p>120 Orenda Rd Unit 2 <br> Brampton, ON L6W 1W2</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5 map-border">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.699467231437!2d-79.732197!3d43.696011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3f07a0be3065%3A0xeeb4318d23b7e22!2sGGS%20AUTO%20COLLISION!5e0!3m2!1sen!2sca!4v1586166388640!5m2!1sen!2sca" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- About Us Page -->
+      <div class=" col-12 p-0 m-0" id="contact-us" data-aos="fade-in" data-aos-duration="1300">
+        <div class="container py-4">
+          <div class="row col-12">
+            <div class="col-12">
+              <h2 class="font-lobster text-dark">About Us !!!</h2>
+              <hr class="ml-0 w-25 bg-dark" style="height:6px;border:none;color:#333;00" />
+            </div>
+            <div class="row col-12">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Footer Here -->
+      <footer class="footer-custom" data-aos="fade-in" data-aos-duration="1300">
+        <div class="dark-opacity col-12 row container-fluid p-4">
+           <div class="col footer-link">
+              <Strong>Business Hours</Strong> <br>
+              Monday to Friday: 8AM - 6PM <br>
+              Saturaday and Sunday: 9AM - 5PM <br>
+              Emergency Available 24/7 By Phone <br>
+              &copy; Copyrighted by GGS AutoCollision <a href="/" class="footer-link">www.ggsautocollision.com</a>
+            </div>
+        </div>
+      </footer>
+      
+      
+      
+      <!-- Navigation for Mobile Screen -->
+      <nav class="col p-0 navigation">
+          <div class="flex bg-light">
+            <img src="https://i.ibb.co/SPJCjWW/logoReal.png" class="w-25 img-fluid text-center">
+            <span id="menu" class="rem2 mr-2">
+              <i class="fa fa-bars text-dark"></i>
+            </span>
+          </div>
+          <!-- <a href="/" class="col-12 p-0 d-block text-center">
+              <img src="https://i.ibb.co/PMRZcjk/abc588c0-f79c-4bac-a9ba-7bd74c6a301b-200x200.png" class="img-fluid w-50 text-center">
+          </a> -->
+          <ul class="col-12 p-0 list-group nav-back-phone">
+              <div class="flex">
+                <img src="https://i.ibb.co/PMRZcjk/abc588c0-f79c-4bac-a9ba-7bd74c6a301b-200x200.png" class="img-fluid w-25 text-center">
+                <div class="text-white p-3" style="font-size: 2rem;">
+                  <i class="fa fa-times-circle cross"></i>
+                </div>
+              </div>
+              <a href="#home" class="link-disable text-white"><li class="nav-item-phone">HOME</li></a>
+              <a href="#book-appointment" class="link-disable text-white"><li class="nav-item-phone">BOOK APPOINTMENT</li></a>
+              <a href="#services" class="link-disable text-white"><li class="nav-item-phone">SERVICES</li></a>
+              <a href="#about" class="link-disable text-white"><li class="nav-item-phone">ABOUT US</li></a>
+              <a href="#contact-us" class="link-disable text-white"><li class="nav-item-phone">CONTACT US</li></a>
+              <br>
+              <div class="col">
+                <button class="btn-custom">CALL US</button>
+                <a href="https://api.whatsapp.com/send?phone=+16475610855">
+                  <button class="btn-custom"><i class="fa fa-whatsapp" style="font-size: 20px"></i> WHATSAPP</button>
+                </a>
+                
+              </div>
+          </ul>
+          
+      </nav>
+    </div>
+    
+    <script>
+      AOS.init();
+      $(document).on('click', 'a[href^="#"]', function (event) {
+        event.preventDefault();
+    
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 500);
+    });
+    </script>
+
+
+
