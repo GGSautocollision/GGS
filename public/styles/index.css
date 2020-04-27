@@ -24,7 +24,6 @@ body{
     text-align: center;
     letter-spacing: 0.22rem;
     font-weight: 800;
-    font-family: Calibri;
     font-size: 1.15rem;
     padding: 20px;
 }
@@ -412,4 +411,9 @@ body{
     letter-spacing: 0.1rem;
     padding: 5px;
     font-weight: bold;
+}
+
+.about-us-image{
+    filter: brightness(120%) saturate(110%);
+    border-radius: 20px;
 }
