@@ -185,6 +185,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    transition: 0.4s;
 }
 .text-shadow{
     text-shadow: 3px 3px 5px black;
@@ -202,7 +203,7 @@ body{
 
 /* Book Appointment Panel */
 .dark-background{
-    background: url("https://images.pexels.com/photos/919073/pexels-photo-919073.jpeg?auto=compress&cs=tinysrgb&h=650&w=940");
+    background: linear-gradient(to bottom right, #000428, #004e92);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -291,6 +292,7 @@ body{
   left: 0; right: 0;
   cursor: pointer;
   transition: transform 0.4s ease;
+  border: 3px solid white;
 }
 
 #s1:checked ~ #slide4, #s2:checked ~ #slide5,
@@ -328,11 +330,11 @@ body{
   transform: translate3d(30%,0,-200px);
 }
 
-#slide1 { background: #00BCD4 }
-#slide2 { background: #4CAF50 }
-#slide3 { background: #CDDC39 }
-#slide4 { background: #FFC107 }
-#slide5 { background: #FF5722 }
+#slide1 { background: url("https://i.ibb.co/yfssDNM/black-and-white-car-vehicle-vintage-474.jpg") }
+#slide2 { background: url("https://i.ibb.co/kDDkSwS/photo-of-man-inspecting-car-engine-3807517.jpg") }
+#slide3 { background: url("https://i.ibb.co/d2XvbV8/man-in-black-jacket-standing-under-the-vehicle-3807133.jpg") }
+#slide4 { background: url("https://i.ibb.co/yfssDNM/black-and-white-car-vehicle-vintage-474.jpg") }
+#slide5 { background: url("https://i.ibb.co/1K30Sns/florian-olivo-Y3e-Ghg-Fu7ns-unsplash.jpg") }
 
 
 /* Loading Gif */
@@ -341,7 +343,7 @@ body{
     height: 100%;
     position: fixed;
     z-index: 9999;
-    background: url("https://jsbirdi0001.github.io/blog/load.gif") no-repeat center center rgba(0,0,0,0.25);
+    background: url("https://jsbirdi0001.github.io/blog/load.gif") no-repeat center center rgba(255, 255, 255, 1);
 }
 
 .service-autocollision{

@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>GGS AutoCollision</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
@@ -50,8 +50,28 @@
             },1000);
         }
       }
-      
+    var a = [
+    " https://i.ibb.co/g6tywHb/0e0458625f087043f8ce4b094ada1275-dark-background-with-car-silhouette-transportation-photos-1260-840.jpg",
+    " https://i.ibb.co/Jv63dg1/8ce83b36bf3a65427144bcce7ec68065.jpg",
+    " https://i.ibb.co/80mCvZG/black-grey-and-red-coupe-on-grey-concrete-road-163582.jpg" ,
+    " https://i.ibb.co/DLtSBRw/photography-of-street-during-rainy-day-1207951.jpg"];      
+    var num = 0;
+    setInterval(function(){
+      if(num == 4){
+        num = 0;
+      }
+      var b = "url("+ a[num] +")";
+      $(".jumbotron-custom").css({
+        "background" : b,
+        "background-size" : "cover",
+        "background-position" : "center",
+        "background-repeat" : "no-repeat"
+      });
+      console.log("Changed");
+      num++;
+    }, 3000);
     </script>
+
   </head>
   <body>
     <div id="load" style="visibility: visible;"></div>
@@ -221,26 +241,26 @@
       <!-- Contact Us -->
       <div class="white-background col-12 p-0 m-0" id="contact-us" data-aos="fade-in" data-aos-duration="1300">
         <div class="container py-4">
-          <div class="row col-12">
+          <div class="row col-12 p-0 m-0">
             <div class="col-12">
               <h2 class="font-lobster text-dark">Contact Us !!!</h2>
               <hr class="ml-0 w-25 bg-dark" style="height:6px;border:none;color:#333;00" />
             </div>
-            <div class="col-md-7">
-              <div class="col-12 row">
+            <div class="col-md-7 p-0">
+              <div class="col-12 row m-0">
                 <div class="col-3 text-center">
                   <i class="fa fa-question" style="font-size: 5rem;"></i>
                 </div>
-                <div class="col-9">
+                <div class="col-9 m-0">
                   <h2>Questions</h2>
                   <p>Feel free to reach out to us if you have any concern <br> 
-                    <strong>Phone:</strong> +1 4454654654564646 <br>
-                    <strong>Email: ggs@gmail.com</strong> <br>
+                    <strong>Phone: +1 647-561-0855 <br></strong>
+                    <strong>Email: harminderkular07@gmail.com</strong> <br>
                   </p> <br>
                 </div>
               </div>
               
-              <div class="col-12 row">
+              <div class="col-12 row m-0">
                 <div class="col-3 text-center">
                   <i class="fa fa-map-marker" style="font-size:5rem"></i>
                 </div>
@@ -267,11 +287,11 @@
             </div>
             <div class="row col-12">
               <p class="col-md-8 p-3">
-                At CarAid Auto Collision, we take pride in having the highest standard in repairs, 
-                customer service and the newest equipment along with the finest industry training.
+                At GGS Auto Collision, we take pride in having the highest standard in various aspects i.e.
+                repairs, customer service, towing and the newest equipment along with the finest industry training.
                 <br><br>
-                At CarAid Auto Collision, we ensure that the work is of superior quality, on any make
-                or model of vehicle, new or old.
+                At GGS Auto Collision, we ensure that you get best quality and best price as compared to market rate.
+                We will ensure to provide quality service for all vehicles whether new or old.
               </p>
               <div class="col-md-4">
                 <img src="https://i.ibb.co/NS3wHDg/ggs.jpg" class="img-fluid about-us-image" />
