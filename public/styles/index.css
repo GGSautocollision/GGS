@@ -113,39 +113,6 @@ body{
     padding: 10px;
 }
 
-@media only screen and (max-width: 720px) {
-    #menu{
-        display: inline-block;
-    }
-    .navigation-large{
-        display: none;
-    }
-    .navigation{
-        display: block;
-    }
-    .navigation .nav-back-phone{
-        display: none;
-    }
-    .jumbotron-custom{
-        height: 100vh;
-    }
-    .jumbotron-custom h1{
-        font-size: 3rem;
-        padding-top: 50px;
-    }
-    .service-item{
-        font-size: 0.7rem;
-    }
-}
-@media only screen and (max-width: 1000px){
-    .navigation-large{
-        padding-top: 10px;
-    }
-    .navigation-large li{
-        padding: 3px;
-    }
-}
-
 /* Navigation for big screen */
 .w-10{
     width: 8%;
@@ -203,11 +170,10 @@ body{
 
 /* Book Appointment Panel */
 .dark-background{
-    background: linear-gradient(to bottom right, #000428, #004e92);
+    background: url("https://i.ibb.co/FsDfgsC/appointment-backgrounds.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
 }
 
 .form-group-custom{
@@ -293,6 +259,9 @@ body{
   cursor: pointer;
   transition: transform 0.4s ease;
   border: 3px solid white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
 }
 
 #s1:checked ~ #slide4, #s2:checked ~ #slide5,
@@ -348,38 +317,20 @@ body{
 
 .service-autocollision{
     background: url("https://image.freepik.com/free-photo/automobile-accident-street_158538-10306.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 200px;
-    background-position: center;
-    overflow: hidden;
 }
 .service-deny{
     background: url("https://image.freepik.com/free-vector/denial-stamps_1017-5622.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 200px;
-    background-position: center;
-    overflow: hidden;
 }
 .service-oil{
     background: url("https://image.freepik.com/free-psd/car-mechanic-holding-plastic-can-mockup_23-2147954855.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 200px;
-    background-position: center;
-    overflow: hidden;
 }
 .service-paint{
     background: url("https://img.freepik.com/free-photo/car-detailing-man-holds-microfiber-hand-polishes-car_35048-1452.jpg?size=626&ext=jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 200px;
-    background-position: center;
-    overflow: hidden;
 }
 .service-tow{
     background: url("https://image.freepik.com/free-photo/car-tow-truck_19-131096.jpg");
+}
+.service-back{
     background-repeat: no-repeat;
     background-size: cover;
     height: 200px;
@@ -408,7 +359,6 @@ body{
     position: absolute;
     background: white;
     color: black;
-    font-family: Calibri;
     text-align: center;
     letter-spacing: 0.1rem;
     padding: 5px;
@@ -418,4 +368,63 @@ body{
 .about-us-image{
     filter: brightness(120%) saturate(110%);
     border-radius: 20px;
+}
+
+
+
+@media only screen and (max-width: 720px) {
+    #menu{
+        display: inline-block;
+    }
+    .navigation-large{
+        display: none;
+    }
+    .navigation{
+        display: block;
+    }
+    .navigation .nav-back-phone{
+        display: none;
+    }
+    .jumbotron-custom{
+        height: 100vh;
+    }
+    .jumbotron-custom h1{
+        font-size: 3rem;
+        padding-top: 50px;
+    }
+    .service-item{
+        font-size: 0.7rem;
+    }
+    .service-back{
+        height: 150px;
+        background-position: center;
+    }
+    .service-before-design{
+        background-size: cover;
+    }
+    .service-before-design::before{
+        height: 5px;
+        width: 60px;
+        top: 5px;
+    }
+    .service-before-design::after{
+        height: 5px;
+        width: 60px;
+        bottom: 5px;        
+    }
+    .container{
+        padding: 0;
+    }
+    .dark-background{
+        background-position: top right;
+    }
+    
+}
+@media only screen and (max-width: 1000px){
+    .navigation-large{
+        padding-top: 10px;
+    }
+    .navigation-large li{
+        padding: 3px;
+    }
 }
