@@ -11,6 +11,6 @@ app.use('/', mainRoute);
 
 
 
-app.listen(3000, process.env.IP, () => {
-    console.log("Application is running" + process.env.PORT + "and" + process.env.IP);
+app.listen(process.env.PORT, process.env.IP, () => {
+    console.log("Application is running");
 })
