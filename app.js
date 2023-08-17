@@ -9,6 +9,8 @@ app.use(bodyParser.urlencoded({extended:true}));
     
 app.use('/', mainRoute);
 
-app.listen(process.env.PORT, process.env.IP, () => {
-    console.log("Application is running")
+
+
+app.listen(3000, process.env.IP, () => {
+    console.log("Application is running" + process.env.PORT + "and" + process.env.IP);
 })
