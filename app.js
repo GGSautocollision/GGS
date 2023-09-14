@@ -17,10 +17,10 @@ app.use(bodyParser.urlencoded({extended:true}));
     
 app.use('/', mainRoute);
 
-httpsServer.listen(8000, () => {
-    console.log('Server is running on port 443');
-});
+// httpsServer.listen(3000, () => {
+//     console.log('Server is running on port 8000');
+// });
 
-// app.listen(process.env.PORT, process.env.IP, () => {
-//     console.log("Application is running");
-// })
+httpsServer.listen(process.env.PORT, process.env.IP, () => {
+    console.log("Application is running at 8000 with https");
+})
