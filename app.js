@@ -10,21 +10,22 @@ const options = {
     cert: process.env.SSL_CERTIFICATE,
     };
       
-const server = https.createServer(options, app);
 
-server.set("view engine","ejs");
-server.use(express.static("public"));
-server.use(bodyParser.urlencoded({extended:true}));
+
+app.set("view engine","ejs");
+app.use(express.static("public"));
+app.use(bodyParser.urlencoded({extended:true}));
     
-server.use('/', mainRoute);
+app.use('/', mainRoute);
 
+const server = https.createServer(options, app);
 // httpsServer.listen(3000, () => {
 //     console.log('Server is running on port 8000');
 // });
 
 const PORT = process.env.PORT;
 
-server.listen(PORT, () => {
+server.listen(3000, () => {
     console.log("Application is running at 8000 with https");
 })
 
