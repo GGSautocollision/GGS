@@ -5,11 +5,13 @@ var express = require("express"),
     bodyParser = require("body-parser"),
     mainRoute = require("./routes/mainRoutes");
 
-// const privateKey = fs.readFileSync('./routes/key.key', 'utf8');
-// const certificate = fs.readFileSync('./routes/crt.crt', 'utf8');
-// const credentials = { key: privateKey, cert: certificate };
+const options = {
+    key: process.env.SSL_PRIVATE_KEY,
+    cert: process.env.SSL_CERTIFICATE,
+    };
+      
 
-// const httpsServer = https.createServer(credentials, app);
+const server = https.createServer(credentials, app);
 
 app.set("view engine","ejs");
 app.use(express.static("public"));
@@ -21,7 +23,9 @@ app.use('/', mainRoute);
 //     console.log('Server is running on port 8000');
 // });
 
-app.listen(process.env.PORT, process.env.IP, () => {
+const PORT = process.env.PORT || 3000;
+
+server.listen(PORT, process.env.IP, () => {
     console.log("Application is running at 8000 with https");
 })
 
