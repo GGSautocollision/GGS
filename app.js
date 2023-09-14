@@ -10,11 +10,13 @@ var express = require("express"),
         key: fs.readFileSync('./routes/key.pem'),
       };
 
+      app.set("view engine","ejs");
+      app.use(express.static("public"));
+      app.use(bodyParser.urlencoded({extended:true}));
+      app.use('/', mainRoute);
+
 const server = https.createServer(options, (req, res) => {
-    app.set("view engine","ejs");
-    app.use(express.static("public"));
-    app.use(bodyParser.urlencoded({extended:true}));
-    app.use('/', mainRoute);
+
   });
 
 // httpsServer.listen(3000, () => {
@@ -24,7 +26,7 @@ const server = https.createServer(options, (req, res) => {
 
 const PORT = process.env.PORT;
 
-server.listen(PORT, () => {
+app.listen(8000, () => {
     console.log("Application is running at with https");
 })
 
