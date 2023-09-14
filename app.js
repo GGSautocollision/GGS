@@ -22,9 +22,9 @@ server.use('/', mainRoute);
 //     console.log('Server is running on port 8000');
 // });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 
-server.listen(PORT, process.env.IP, () => {
+server.listen(PORT, () => {
     console.log("Application is running at 8000 with https");
 })
 
