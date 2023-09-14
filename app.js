@@ -5,8 +5,8 @@ var express = require("express"),
     bodyParser = require("body-parser"),
     mainRoute = require("./routes/mainRoutes");
 
-const privateKey = fs.readFileSync('./routes/generated-private-key.txt', 'utf8');
-const certificate = fs.readFileSync('./routes/generated-csr.txt', 'utf8');
+const privateKey = fs.readFileSync('./routes/key.key', 'utf8');
+const certificate = fs.readFileSync('./routes/crt.crt', 'utf8');
 const credentials = { key: privateKey, cert: certificate };
 
 const httpsServer = https.createServer(credentials, app);
@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({extended:true}));
     
 app.use('/', mainRoute);
 
-httpsServer.listen(443, () => {
+httpsServer.listen(8000, () => {
     console.log('Server is running on port 443');
 });
 
