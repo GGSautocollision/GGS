@@ -19,13 +19,14 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use('/', mainRoute);
 
 const server = https.createServer(options, app);
+
 // httpsServer.listen(3000, () => {
 //     console.log('Server is running on port 8000');
 // });
 
 const PORT = process.env.PORT;
 
-server.listen(3000, () => {
+server.listen(PORT, () => {
     console.log("Application is running at 8000 with https");
 })
 
