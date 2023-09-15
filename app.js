@@ -5,19 +5,19 @@ var express = require("express"),
     bodyParser = require("body-parser"),
     mainRoute = require("./routes/mainRoutes");
 
-    const options = {
-        cert: fs.readFileSync('./routes/crt.pem'),
-        key: fs.readFileSync('./routes/key.pem'),
-      };
+    // const options = {
+    //     cert: fs.readFileSync('./routes/crt.pem'),
+    //     key: fs.readFileSync('./routes/key.pem'),
+    //   };
 
       app.set("view engine","ejs");
       app.use(express.static("public"));
       app.use(bodyParser.urlencoded({extended:true}));
       app.use('/', mainRoute);
 
-const server = https.createServer(options, (req, res) => {
+// const server = https.createServer(options, (req, res) => {
 
-  });
+//   });
 
 // httpsServer.listen(3000, () => {
 //     console.log('Server is running on port 8000');
